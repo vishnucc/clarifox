@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarifox Technologies Private Limited</title>
+    <link rel="icon" type="image/x-icon" href="https://sashidhar975.github.io/for-logo/fav.png">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://assets.squarespace.com/universal/images-v6/parking-page/black-grid-2500w.avif') no-repeat center center/cover;
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav h1 {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        nav h1 img {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            background: transparent; /* Ensure the background is transparent */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li a {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #home {
+            background: none; /* No background image for home section */
+            padding: 100px 20px;
+        }
+
+        #about {
+            background: none; /* No background image for about section */
+            padding: 50px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #about h2 p{
+            flex: 1;
+            margin-right: -60px;
+            text-align: left;
+        }
+       
+
+        #about img {
+            width: 50%;
+            margin-left: 0%;
+            height: auto;
+            flex: 1;
+        }
+
+        #services {
+            background: none; /* No background image for services section */
+            padding: 50px 20px;
+        }
+
+        #services ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        #services ul li {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #services ul li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #services ul li img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+
+        #contact {
+            background: none; /* No background image for contact section */
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            
+        }
+
+        #contact h2 {
+            text-decoration-line: underline;
+        
+        }
+
+        form {
+            flex: 1;
+            max-width: 500px;
+            margin-right: 20px;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+            color: #fff;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .map {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            border: 0;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .footer div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer h2 {
+            margin-bottom: 10px;
+            color: #fff;
+            text-decoration-line: underline;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+         /* Team Section */
+         #teams {
+            padding: 50px 20px;
+        }
+
+        #teams h2 {
+            margin-bottom: 20px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .team-1, .team-2 {
+            flex: 1;
+            margin: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .team-1 img, .team-2 img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .team-1 h3, .team-2 h3 {
+            margin: 20px 0 10px;
+            font-size: 1.5em;
+        }
+
+        .team-1 p, .team-2 p {
+            font-size: 1em;
+            color: #ccc;
+        }
+
+        /* Hiring Section */
+        #hiring {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+        }
+
+        #hiring img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        #hiring p {
+            font-size: 1.2em;
+            color: #ccc;
+            text-align: center;
+            max-width: 800px;
+        }
+        
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 0 0 10px 0;
+                
+            }
+
+            nav h1 {
+                margin-bottom: 10px;
+                font-size: 1.2em;
+            }
+
+            #home, #about, #services, #contact {
+                padding: 40px 10px;
+            }
+
+            .footer {
+                grid-template-columns: 1fr; /* Stack columns in mobile view */
+            }
+
+            .footer div {
+                text-align: center;
+            }
+
+            .map {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><img src="https://sashidhar975.github.io/for-logo/log.png" alt="Logo" style="width: 50px; height: 50px; margin-right: -16px; background: transparent;">Clarifox</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h1>Clarifox Technologies Private Limited</h1>
+        <p>Providing expert solutions for your business needs.</p>
+        
+    </section>
+    
+    <section id="about">
+        <h2>Design,
+            Analytics &
+            Product Engineering<br>
+            _____ is our Core Expertise.</h2>
+        <p>We are a team of experienced consultants specializing in software development, project management, and IT strategy.</p>
+        <img src="https://qualminds.com/images/homepage/robohand@2x.png" alt="img">
+    </section>
+    <section id="teams">
+        <h2>We Believe Building Great Products always
+            need Two Things</h2>
+            <div class="team-1"><img src="https://qualminds.com/images/Group_1964.png" alt="img">
+            <h3>A Strong Team</h3>
+            <p>We follow a Unique Strategy in <br>team <br>
+                building process together to build <br> exceptional <br>
+                products for our clients</p>
+                </div>
+                <div class="team-2"><img src="https://qualminds.com/images/Group_1958.png" alt="img">
+                    <h3>A Smart Approach</h3>
+                    <p>Explore agile team dynamics,<br> culture & <br>
+                        collaboration and build a smart, <br>agile team using <br>
+                        small iterations instead long cycle</p>
+                        </div>
+    </section>
+    
+    <section id="services">
+        <h2>Our Digital Services Leverage Technology <br>to Innovate & Drive Efficiency.</h2>
+        <ul>
+            <li>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ3vow1vz2WkVsRy2Pzbgos-_No_lNvUdrvg&s" alt="Custom Software Development">
+                <h3>Custom Software Development</h3>
+            </li>
+            <li>
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*u4EBes6Muu2fy7iM8igMug.jpeg" alt="Project Management">
+                <h3>Project Management</h3>
+            </li>
+            <li>
+                <img src="https://slidemodel.com/wp-content/uploads/21561-01-strategy-consulting-powerpoint-template-16x9-8.jpg" alt="IT Strategy and Consulting">
+                <h3>IT Strategy and Consulting</h3>
+            </li>
+            <li>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYl8Nd65XUgobpZwoaIpbPcpPqX7MmduwWVQ&s" alt="Cloud Solutions">
+                <h3>Cloud Solutions</h3>
+            </li>
+            <li>
+                <img src="https://in.element14.com/wcsstore/ExtendedSitesCatalogAssetStore/cms/asset//images/common/technology/technical-resources-twitter-post.jpg" alt="Technical">
+                <h3>Technical</h3>
+        </ul>
+    </section>
+    <section id="hiring">
+        <h2>Let's Build Something Great!</h2>
+        <img src="https://qualminds.com/images/homepage/hiringartwork.png" alt="img">
+        <p>Join us in our mission to make the world a better place. We believe in making a difference.
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Interested in working together? <br>Fill out some info and we will be in touch shortly. We can’t wait to hear from you!</p>
+        <div class="footer">
+            <form id="contact-form" action="mailto:info@clarifox.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.051746609922!2d78.3707046!3d17.457237199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93cf99046fdf%3A0x7a77d0aa3ace1e5a!2sUnispace%20-%20Coworking%20and%20Business%20Center!5e0!3m2!1sen!2sin!4v1718729251387!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer" id="footer">
+            <div>
+                <h1><img src="https://sashidhar975.github.io/for-logo/log.png" alt="Logo" style="width: 50px; height: 50px; margin-right: -16px; background: transparent;">Clarifox</h1>
+                <p>Providing expert solutions for your business needs</p>
+            </div>
+            <div>
+                <h2>Who we are</h2>
+                <p>About Us</p>
+                <p>Our Values</p>
+                <p>Our Team</p>
+                <p>Our Approach</p>
+                <p>Current Positions</p>
+                <p>Contact us</p>
+            </div>
+            <div>
+                <h2>What we do</h2>
+                <p>Digital Product Engineering</p>
+                <p>Data Engineering</p>
+                <p>Quality Engineering</p>
+                <p>DevOps</p>
+                <p>Mobility & IOT</p>
+                <p>Dedicated Team</p>
+            </div>
+            <div>
+                <h2>Insights</h2>
+                <p>White Papers</p>
+            </div>
+            <div>
+                <h2>Have Questions?</h2>
+                <p>+91 8197404864</p>
+                <p>info@clarifox.com</p>
+                <p>Kondapur, Hyderabad, Telangana- 500032</p>
+            </div>
+        </div>
+        <p>&copy; 2024 Clarifox Technologies Private Limited. All rights reserved.</p>
+    </footer>
+</body>
+</html>
